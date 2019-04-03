@@ -12,4 +12,6 @@ func main() {
 	remainingCards.print()
 	fmt.Println("Hand is")
 	hand.print()
+
+	fmt.Println(hand.toString())
 }
