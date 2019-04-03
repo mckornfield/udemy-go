@@ -15,4 +15,6 @@ func main() {
 
 	fmt.Println(hand.toString())
 	hand.saveToFile("my_cards")
+	hand2 := newDeckFromFile("my_cards")
+	hand2.print()
 }
