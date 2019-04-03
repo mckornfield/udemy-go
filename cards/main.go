@@ -14,4 +14,5 @@ func main() {
 	hand.print()
 
 	fmt.Println(hand.toString())
+	hand.saveToFile("my_cards")
 }
