@@ -9,7 +9,7 @@ type deck []string
 func newDeck() deck {
 	cards := deck{}
 	cardSuits := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
-	cardsValues := []string{"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"}
+	cardsValues := []string{"Ace", "Two", "Three", "Four"}
 
 	for _, suit := range cardSuits {
 		for _, value := range cardsValues {
@@ -20,7 +20,11 @@ func newDeck() deck {
 }
 
 func (d deck) print() {
-	for i, card := range d {
-		fmt.Println(i, card)
+	for _, card := range d {
+		fmt.Println(card)
 	}
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
