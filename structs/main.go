@@ -47,6 +47,15 @@ func main() {
 	jim.updateNameWithPointer("fred")
 	fmt.Println(jimPointer)
 	jim.print()
+
+	mySlice := []string{"Hi", "There", "How", "Are", "You"}
+	updateSlice(mySlice)
+	fmt.Println("")
+	fmt.Println(mySlice)
+
+	name := "Bill"
+
+	fmt.Println(*&name)
 }
 
 // This doesn't work, but kept here for pedagogical value
@@ -60,4 +69,8 @@ func (p *person) updateNameWithPointer(newFirstName string) {
 
 func (p person) print() {
 	fmt.Printf("%+v", p)
+}
+
+func updateSlice(s []string) {
+	s[0] = "Bye"
 }
