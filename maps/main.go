@@ -37,6 +37,24 @@ func main() {
 
 	// Print initial map
 	printMap(colors)
+
+	stuff := stuff{}
+	stuff.thing = "a" == "a"
+	fmt.Println(stuff)
+
+	num := 15
+	switch num {
+
+	case 10:
+	case 15:
+		fmt.Println("it's stacked!")
+	case 5:
+		fmt.Println("you got it!")
+	}
+}
+
+type stuff struct {
+	thing bool
 }
 
 func printMap(c map[string]string) {
